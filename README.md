@@ -2,7 +2,7 @@
 
 In this exercise you will become familiar with the major components of a VERY simple web application built with the Django web application framework. Begin with the tasks below.
 
-##Tasks
+## Tasks
 1. fork this project to your github account
 
 2. clone this project to a directory on your machine and cd into the project directory
