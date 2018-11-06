@@ -8,7 +8,9 @@ In this exercise you will become familiar with the major components of a VERY si
 2. clone this project to a directory on your machine and cd into the project directory
 create a virtual environment for the django project. This project requires django version 2+ so make sure your virtual environment is constructed with python 3.
 
-3. with your virtual environment activated install the requirements ```pip install -r requirements.txt```
+3. with your virtual environment activated install the requirements:
+
+```pip install -r requirements.txt```
 
 4. Set up the database for Django
 
