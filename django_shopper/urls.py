@@ -23,3 +23,9 @@ urlpatterns = [
 	path('item/<int:pk>/', ItemView.as_view(), name='item'),
     path('admin/', admin.site.urls),
 ]
+
+
+
+
+
+
