@@ -16,7 +16,8 @@ A listing of template tags for the Django template engine: https://docs.djangopr
 
 Overview of the Django template language: https://docs.djangoproject.com/en/2.1/topics/templates/#the-django-template-language
 
-[Nov 8] Start where you left off on the Nov 6 in class exercise. If you weren't in class, you begin by forking the repo. It contains the changes made in the last class.
+## Tasks
+Start where you left off on the Nov 6 in class exercise. If you weren't in class, you begin by forking the repo. It contains the changes made in the last class.
 
 1. Download and place the base.html file in the shopper_app/templates directory. base.html provides the basic html document structure required for all pages in the app. The base file also includes the bootstrap css framework.
 
