@@ -1,4 +1,16 @@
 # cs463-django-sl-01
+
+## Nov 13
+Form Handling
+
+A walkthrough for adding I/O using model based forms to the Shopper App. Necessary files:
+
+* views.py
+
+* urls.py
+
+* (new)item_add.html
+
 ## Nov 8
 Template Inheritance
 
