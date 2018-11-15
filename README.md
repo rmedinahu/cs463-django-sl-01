@@ -31,7 +31,7 @@ Overview of the Django template language: https://docs.djangoproject.com/en/2.1/
 ## Tasks
 Start where you left off on the Nov 6 in class exercise. If you weren't in class, you begin by forking the repo. It contains the changes made in the last class.
 
-1. Download and place the base.html file in the shopper_app/templates directory. base.html provides the basic html document structure required for all pages in the app. The base file also includes the bootstrap css framework.
+1. Download and place the base.html file (https://github.com/rmedinahu/cs463-django-sl-01/blob/master/shopper_app/templates/base.html) in the shopper_app/templates directory. base.html provides the basic html document structure required for all pages in the app. The base file also includes the bootstrap css framework.
 
 2. Add named block as a child of the body tag in base.html. Name the block content_body and add some default text. Place after the navbar!
 
