@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A List of Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Shopping List {{ object.title }}</h1>
+
+    <ul>
+    	{% for item in shopping_list_items %} 
+   			<li>
+   				<a href="{% url 'item' item.pk %}">{{ item.name }} ${{ item.price }}</a>
+   			</li>
+    	{% endfor %}
+    </ul>
+</body>
+</html>

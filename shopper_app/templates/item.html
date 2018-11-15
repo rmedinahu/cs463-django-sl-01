@@ -1,16 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>An Item</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <h1>ITEM</h1>
-    <ul>
-    	<p>Name {{ object.name }}</p>
-    	<p>Price {{ object.price }}</p>
-    	<p>Description {{ object.description }}</p>
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content_body %}
+
+<div class="row">
+	
+	<!-- LEFT -->
+	<div class="col-md-3">
+		<h3>{{ object.name }}</h3>
+	</div>
+
+	<!-- RIGHT -->
+	<div class="col-md-9">
+		<p><img src="{{ object.image_url }}" width="320px"></p>
+		<p>${{ object.price }}</p>
+    	<p>{{ object.description }}</p>		
+	</div>
+
+</div>
+
+{% endblock content_body %}

@@ -20,10 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">menu item</a>
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">menu item</a>
+                        <a class="nav-link" href="{% url 'item_list' %}">Inventory</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://getbootstrap.com/docs/4.1/components/navbar/">Navbar?</a>
@@ -32,6 +32,11 @@
             </div>
         </nav>
         <!-- Page Content Begins -->
+
+        {% block content_body %}
+        If you are reading this you may not be correctly using the base.html template. Content here should be specific to the page you are constructing.
+        {% endblock content_body %}
+
 
         <!-- Page Content Ends -->
         
