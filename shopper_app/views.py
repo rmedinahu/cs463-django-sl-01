@@ -29,8 +29,11 @@ class ItemCreateView(generic.CreateView):
 	success_url = reverse_lazy('item_list')
 
 
+class ShoppingListViewAll(generic.ListView):
+	model = ShoppingList
+	template_name = 'item_list.html'
 
-# ignore this
+	
 class ShoppingListView(generic.DetailView):
 	model = ShoppingList
 	template_name = 'shopping_list.html'

@@ -1,7 +1,49 @@
 # cs463-django-sl-01
 
+## Nov 15 
+Form Handling v.2 and Customizing Views
+
+This project has been updated to have the cumulative modifications to shopper app as exercised in class. You have two options for today.
+
+a. Fork then clone this repository again (you may need delete your previous fork and your related work). 
+
+b. Alternatively, you can simply clone this repository to separate directory.
+
+1. Add a link to ```item_list.html``` that takes users to the page for adding items (nov 13)
+
+2. Add a link to the item_add form that opens a new tab to https://images.google.com/ so that users can look up an image url when they are creating a new item. Test your modification by adding a few items to the app using the form.
+
+3. From the shopper_app open: ```models.py``` ```views.py``` ```shopping_list.html```. From the django_shopper directory open: ```urls.py```
+
+4. Add a form to create a new Shopping List object (see ```ItemCreateView``` for example).
+
+    a. Create a new template for displaying the form.
+
+    b. Create a view in views.py for displaying the form (use generic.CreateView). Set the template_name attribute to the file you created in the previous step.
+
+    c. Add a url pattern to ```urls.py``` that displays the shopping list form. Add a link to this url to home.html template.
+
+    d. Test that your new url works and add two shopping lists.
+
+
+5. Add a form to add items to a shopping list. Hint: Create new form for adding ```ShoppingListItem``` objects (see ```models.py```) to the application. Same process:
+
+    a. Create a new template for displaying the form.
+
+    b. Create a view in views.py for displaying the form (use generic.CreateView). Set the template_name attribute to the file you created in the previous step.
+
+    c. Add a url pattern to ```urls.py``` that displays the shopping list item form. Add a link to this url to the shopping list page .
+
+    d. Test that your new url works and add a few items to each of your lists.
+
+
+
+
+
+
+
 ## Nov 13
-Form Handling
+Form Handling v.1
 
 A walkthrough for adding I/O using model based forms to the Shopper App. Necessary files:
 
