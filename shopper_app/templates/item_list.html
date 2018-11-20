@@ -2,7 +2,7 @@
 
 {% block content_body %}
     <h1>The Item Inventory</h1>
-
+    <p><a class="btn" href="{% url 'item_add' %}">Add New Item</a></p>
     <ul>
     	{% for item in object_list %} 
    			<li>

@@ -8,7 +8,6 @@ class Item(models.Model):
 	image_url = models.URLField(null=True)
 
 
-# Ignore this...
 class ShoppingList(models.Model):
 	title = models.CharField(max_length=128)
 

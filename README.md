@@ -1,5 +1,27 @@
 # cs463-django-sl-01
 
+## Nov 20
+Customizing Views and Models
+
+	> You can modify you existing code from Nov 15 or (re)fork or simple clone this repo again.
+
+1. Add a "to string" method to each of the *three* models in ```models.py```. This allows to customize how are objects are printed and displayed. See: https://docs.djangoproject.com/en/2.1/ref/models/instances/#other-model-instance-methods
+
+E.g. for the ShoppingList model:
+
+```python
+def __str__(self):
+    return self.title
+```
+
+	> Now open the admin panel and view various objects in the shopping list app. You should see more descriptive labels for each object.
+
+2. Add a menu item to the menu bar to allow users to add items to a shopping list. The url pattern name in my repo is: ```list_item_add```
+
+3. Add a menu item to the menu bar to allow users to view all shopping lists in the application. The url pattern name in my repo is: ```shopping_list_all```
+
+4. Modify the ```ShoppingListView.get_context_data()``` method to sort the items by price ascending. 
+
 ## Nov 15 
 Form Handling v.2 and Customizing Views
 
@@ -35,11 +57,6 @@ b. Alternatively, you can simply clone this repository to separate directory.
     c. Add a url pattern to ```urls.py``` that displays the shopping list item form. Add a link to this url to the shopping list page .
 
     d. Test that your new url works and add a few items to each of your lists.
-
-
-
-
-
 
 
 ## Nov 13

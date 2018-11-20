@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 # generic views docs: https://docs.djangoproject.com/en/2.1/ref/class-based-views/
 from django.views import generic 
 
-from .models import Item, ShoppingList
+from .models import Item, ShoppingList, ShoppingListItem
 
 
 class HomeView(generic.TemplateView):
@@ -28,10 +28,23 @@ class ItemCreateView(generic.CreateView):
 	fields = ['name', 'price', 'description', 'image_url']
 	success_url = reverse_lazy('item_list')
 
+# Step 4
+class ShoppingListCreateView(generic.CreateView):
+	model = ShoppingList
+	template_name = 'shopping_list_add.html'
+	fields = ['title',]
+	success_url = reverse_lazy('home')
+
+# Step 5
+class ShoppingListItemCreateView(generic.CreateView):
+	model = ShoppingListItem
+	template_name = 'shopping_list_item_add.html'
+	fields = ['shopping_list', 'item']
+	success_url = reverse_lazy('home')
 
 class ShoppingListViewAll(generic.ListView):
 	model = ShoppingList
-	template_name = 'item_list.html'
+	template_name = 'shoppings_list_listall.html'
 
 	
 class ShoppingListView(generic.DetailView):
@@ -45,5 +58,6 @@ class ShoppingListView(generic.DetailView):
 		for i in sl.shopping_items.all():
 			items.append(i.item)
 		context['shopping_list_items'] = items
+		print(items)
 		return context
 
