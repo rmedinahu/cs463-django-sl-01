@@ -3,9 +3,9 @@
 ## Nov 20
 Customizing Views and Models
 
-> You can modify you existing code from Nov 15 or (re)fork or simple clone this repo again.
+> You can modify you existing code from Nov 15 **or** (re)fork **or** simply clone this repo again.
 
-1. Add a "to string" method to each of the *three* models in ```models.py```. This allows to customize how are objects are printed and displayed. See: https://docs.djangoproject.com/en/2.1/ref/models/instances/#other-model-instance-methods
+1. Add a "to string" method to each of the **three** models in ```models.py```. This allows to customize how are objects are printed and displayed. See: https://docs.djangoproject.com/en/2.1/ref/models/instances/#other-model-instance-methods
 
 E.g. for the ShoppingList model:
 
