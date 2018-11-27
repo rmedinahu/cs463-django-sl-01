@@ -25,7 +25,7 @@ Once your code is on your machine:
 
 STEPS:
 
-    a. Add a new view to ```views.py```. Use the following snippet to the view to override the success_url to redirect after successful deletion. NOTE: instead of returning to the home page, it should return to the shopping list page from which the item was deleted. See [reverse](https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse) documentation for pointers on sending arguments. 
+a. Add a new view to ```views.py```. Use the following snippet to the view to override the success_url to redirect after successful deletion. NOTE: instead of returning to the home page, it should return to the shopping list page from which the item was deleted. See [reverse](https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse) documentation for pointers on sending arguments. 
 
 ```python
 def get_success_url(self):
@@ -33,13 +33,13 @@ def get_success_url(self):
     return reverse('home')
 ```
 
-    Ever wonder what generics you can override? See [Classy Based Views](https://ccbv.co.uk/)
+> Ever wonder what generics you can override? See [Classy Based Views](https://ccbv.co.uk/)
     
-    b. Set the template_name for the delete view to ```shopping_list_item_confirm_delete.html``` 
+b. Set the template_name for the delete view to ```shopping_list_item_confirm_delete.html``` 
 
-    c. Add a new url pattern to ```urls.py``` that invokes the view. Note: A good url pattern might be *shopping/list/remove/item/<int:pk>/*. Give the pattern a name: *'remove_shopping_list_item'*
+c. Add a new url pattern to ```urls.py``` that invokes the view. Note: A good url pattern might be *shopping/list/remove/item/<int:pk>/*. Give the pattern a name: *'remove_shopping_list_item'*
 
-    d. Use the named url pattern in step 4. 
+d. Use the named url pattern in step 4. 
 
 4. Modify the ```shopping_list.html``` template to modify the remove button to remove each item from the shopping list. Test.
 
