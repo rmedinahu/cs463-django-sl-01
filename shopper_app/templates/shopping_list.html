@@ -4,9 +4,9 @@
     <h1>{{ object.title }} Shopping List</h1>
 
     <ul>
-    	{% for item in shopping_list_items %} 
+    	{% for sl_item in shopping_list_items %} 
    			<li>
-   				<a href="{% url 'item' item.pk %}">{{ item.name }} ${{ item.price }}</a>
+   				<a href="{% url 'item' sl_item.item.pk %}">{{ sl_item.item.name }} ${{ sl_item.item.price }}</a> <a href="" class="btn btn-sm btn-danger">remove</a>
    			</li>
     	{% endfor %}
     </ul>
