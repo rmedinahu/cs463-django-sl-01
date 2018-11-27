@@ -51,13 +51,16 @@ class ShoppingListView(generic.DetailView):
 	model = ShoppingList
 	template_name = 'shopping_list.html'
 
+	# Method override of DetailView
 	def get_context_data(self, **kwargs):
 		context = super(ShoppingListView, self).get_context_data(**kwargs)
 		sl = self.get_object()
+		# create a list of RELATED items to the current shopping list (sl)
 		items = []
-		for i in sl.shopping_items.all():
+		# item_obj.price ==> item_obj__price
+		for i in sl.shopping_items.all().order_by('item__price'):
 			items.append(i.item)
 		context['shopping_list_items'] = items
-		print(items)
+		# print(items)
 		return context
 
