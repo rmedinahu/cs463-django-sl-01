@@ -13,19 +13,20 @@ Once your code is on your machine:
 
 > Using the menu bar options, add 8 or more items, 2 shopping lists, and make some associations between the items and the shopping lists.
 
-1. Modify ```ItemView.get_context_data``` to create a template variable that holds a list of shopping lists an item is associated with. Use the *related_name* attribute in the ```ShoppingListItem``` model. Display the list in the template ```item.html```
 
-2. Modify the ```shopping_list.html``` template to display the items in the list as a grid that is 4 cells wide. Each cell in the grid shows the image of the item, its name, and its price. The items should remain ordered by price in the grid.
+### 1. Modify ```ItemView.get_context_data``` to create a template variable that holds a list of shopping lists an item is associated with. Use the *related_name* attribute in the ```ShoppingListItem``` model. Display the list in the template ```item.html```
+
+### 2. Modify the ```shopping_list.html``` template to display the items in the list as a grid that is 4 cells wide. Each cell in the grid shows the image of the item, its name, and its price. The items should remain ordered by price in the grid.
 
 [Generic editing docs](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) 
 
 [DeleteView docs and example](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#deleteview)
 
-3. Add a new view to the ```views.py``` file that deletes a shopping list item association (E.g., removes an item from a shopping list). Use the ```DeleteView``` generic. Each association has a unique primary key (pk) in the database. You can use this value to remove associations.
+### 3. Add a new view to the ```views.py``` file that deletes a shopping list item association (E.g., removes an item from a shopping list). Use the ```DeleteView``` generic. Each association has a unique primary key (pk) in the database. You can use this value to remove associations.
 
 STEPS:
 
-3a. Add a new view to ```views.py```. Use the following snippet to the view to override the success_url to redirect after successful deletion. NOTE: instead of returning to the home page, it should return to the shopping list page from which the item was deleted. See [reverse](https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse) documentation for pointers on sending arguments. 
+#### 3a. Add a new view to ```views.py```. Use the following snippet to the view to override the success_url to redirect after successful deletion. NOTE: instead of returning to the home page, it should return to the shopping list page from which the item was deleted. See [reverse](https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse) documentation for pointers on sending arguments. 
 
 ```python
 def get_success_url(self):
@@ -35,13 +36,13 @@ def get_success_url(self):
 
 > Ever wonder what generics you can override? See [Classy Based Views](https://ccbv.co.uk/)
     
-3b. Set the template_name for the delete view to ```shopping_list_item_confirm_delete.html``` 
+#### 3b. Set the template_name for the delete view to ```shopping_list_item_confirm_delete.html``` 
 
-3c. Add a new url pattern to ```urls.py``` that invokes the view. Note: A good url pattern might be *shopping/list/remove/item/<int:pk>/*. Give the pattern a name: *'remove_shopping_list_item'*
+#### 3c. Add a new url pattern to ```urls.py``` that invokes the view. Note: A good url pattern might be *shopping/list/remove/item/<int:pk>/*. Give the pattern a name: *'remove_shopping_list_item'*
 
-3d. Use the named url pattern in step 4. 
+#### 3d. Use the named url pattern in step 4. 
 
-4. Modify the ```shopping_list.html``` template to modify the remove button to remove each item from the shopping list. Test.
+#### 4. Modify the ```shopping_list.html``` template to modify the remove button to remove each item from the shopping list. Test.
 
 
 ## Nov 20
