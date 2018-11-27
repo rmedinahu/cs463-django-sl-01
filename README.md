@@ -42,7 +42,7 @@ def get_success_url(self):
 
 #### 3d. Use the named url pattern in step 4. 
 
-#### 4. Modify the ```shopping_list.html``` template to modify the remove button to remove each item from the shopping list. Test.
+### 4. Modify the ```shopping_list.html``` template to modify the remove button to remove each item from the shopping list. Test.
 
 
 ## Nov 20
