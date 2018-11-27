@@ -6,8 +6,11 @@ Customizing View and Models Part 2
 > (re)fork **or** simply clone this repo again.
 
 Once your code is on your machine:
+
 > Create or reinvoke the appropriate virtual environment. Make sure to run ```pip install -r requirements.txt``` in your VE
+
 > Run ```python manage.py migrate``` to create the db tables
+
 > Using the menu bar options, add 8 or more items, 2 shopping lists, and make some associations between the items and the shopping lists.
 
 1. Modify ```ItemView.get_context_data``` to create a template variable that holds a list of shopping lists an item is associated with. Use the *related_name* attribute in the ```ShoppingListItem``` model. Display the list in the template ```item.html```
