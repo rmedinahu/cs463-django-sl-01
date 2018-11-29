@@ -3,11 +3,12 @@
 {% block content_body %}
     <h1>{{ object.title }} Shopping List</h1>
 
-    <ul>
+    <div class="row">
     	{% for sl_item in shopping_list_items %} 
-   			<li>
-   				<a href="{% url 'item' sl_item.item.pk %}">{{ sl_item.item.name }} ${{ sl_item.item.price }}</a> <a href="" class="btn btn-sm btn-danger">remove</a>
-   			</li>
+   			<div class="col-md-3">
+                <img class="img-thumbnail" src="{{ sl_item.item.image_url }}"  width="300px">
+   				<a href="{% url 'item' sl_item.item.pk %}">{{ sl_item.item.name }} ${{ sl_item.item.price }}</a> <a href="{% url 'shopping_list_remove_item' sl_item.pk %}" class="btn btn-sm btn-danger">remove</a>
+   			</div>
     	{% endfor %}
-    </ul>
+    </div>
 {% endblock %}

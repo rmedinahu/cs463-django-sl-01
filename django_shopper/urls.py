@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from shopper_app.views import HomeView, ItemListView, ItemView, ItemCreateView, ShoppingListView, ShoppingListViewAll, ShoppingListCreateView, ShoppingListItemCreateView
+from shopper_app.views import HomeView, ItemListView, ItemView, ItemCreateView, ShoppingListView, ShoppingListViewAll, ShoppingListCreateView, ShoppingListItemCreateView, ShoppingListDeleteView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('list/<int:pk>/', ShoppingListView.as_view(), name='shopping_list'),
     path('list/add/', ShoppingListCreateView.as_view(), name='list_add'),
     path('shopping/list/add/', ShoppingListItemCreateView.as_view(), name='list_item_add'),
+    path('shopping/list/remove/item/<int:pk>/', ShoppingListDeleteView.as_view(), name='shopping_list_remove_item'),
     path('lists/', ShoppingListViewAll.as_view(), name='shopping_list_all'),
     path('admin/', admin.site.urls),
 ]
